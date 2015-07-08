@@ -168,6 +168,10 @@ module ProMotion
     end
 
     ########## Cocoa touch methods #################
+    def scrollViewDidScroll(_)
+      try :on_scroll
+    end
+  
     def numberOfSectionsInTableView(_)
       self.promotion_table_data.sections.length
     end
