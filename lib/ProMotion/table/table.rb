@@ -172,6 +172,10 @@ module ProMotion
       try :on_scroll
     end
   
+    def tableView(_, didEndDisplayingCell: cell, forRowAtIndexPath: indexPath)
+      try :on_delete_cell
+    end
+      
     def numberOfSectionsInTableView(_)
       self.promotion_table_data.sections.length
     end
